@@ -79,6 +79,21 @@
             <li><a href="{{route('produk.add')}}"><i class="ti-more"></i>Tambah Produk</a></li>
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Percobaan Xss</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('xss.view')}}"><i class="ti-more"></i>Tampilkan Xss</a></li>
+            <li><a href="{{route('xss.add')}}"><i class="ti-more"></i>Tambah Xss</a></li>
+          </ul>
+        </li>
+		  
 		  
         <li class="treeview">
           <a href="#">

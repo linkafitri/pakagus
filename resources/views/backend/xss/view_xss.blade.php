@@ -16,8 +16,8 @@
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Data Mahasiswa</h3>
-				  <a href="{{route('mhs.add')}}" style="float: right;" type="button" class="btn btn-rounded btn-success mb-5">Tambah Mahasiswa</a>
+				  <h3 class="box-title">Data Mahasiswa (Xss)</h3>
+				  <a href="{{route('xss.add')}}" style="float: right;" type="button" class="btn btn-rounded btn-success mb-5">Tambah Mahasiswa</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -41,8 +41,8 @@
 								<td>{{$mhs->alamat}}</td>
 								<td>{{$mhs->tanggal_lahir}}</td>
 								<td>
-									<a href="{{route('mhs.edit', $mhs->id)}}" class="btn btn-info">Edit</a>
-									<a href="{{route('mhs.delete', $mhs->id)}}" id="delete" class="btn btn-danger">Delete</a>
+									<a href="{{route('xss.edit', $mhs->id)}}" class="btn btn-info">Edit</a>
+									<a href="{{route('xss.delete', $mhs->id)}}" id="delete" class="btn btn-danger">Delete</a>
 								</td>
 								
 							</tr>
