@@ -25,25 +25,25 @@ class xss1controller extends Controller
         //     'textNama' =>'required'
         // ]);
         //dd($request);
-        // $data=new Mahasiswa();
-
-        // $sementara1= preg_replace('/<(.*)s(.*)c(.*)p(.*)p(.*)t/i','',$request->nama);
-        // $sementara2= preg_replace('/<(.*)s(.*)c(.*)p(.*)p(.*)t/i','',$request->alamat);
-        // $sementara3= strip_tags($sementara1,'<p>,<ul>,<li>');
-        // $sementara4= strip_tags($sementara2,'<p>,<ul>,<li>');
-
-        // $data->nim=$request->nim;
-        // $data->nama=$sementara3;
-        // $data->alamat=$sementara4;
-        // $data->tanggal_lahir=$request->tanggal_lahir;
-        // $data->save();
-
         $data=new Mahasiswa();
+
+        $sementara1= preg_replace('/<(.*)s(.*)c(.*)p(.*)p(.*)t/i','',$request->nama);
+        $sementara2= preg_replace('/<(.*)s(.*)c(.*)p(.*)p(.*)t/i','',$request->alamat);
+        $sementara3= strip_tags($sementara1,'<p>,<ul>,<li>');
+        $sementara4= strip_tags($sementara2,'<p>,<ul>,<li>');
+
         $data->nim=$request->nim;
-        $data->nama=$request->nama;
-        $data->alamat=$request->alamat;
+        $data->nama=$sementara3;
+        $data->alamat=$sementara4;
         $data->tanggal_lahir=$request->tanggal_lahir;
         $data->save();
+
+        // $data=new Mahasiswa();
+        // $data->nim=$request->nim;
+        // $data->nama=$request->nama;
+        // $data->alamat=$request->alamat;
+        // $data->tanggal_lahir=$request->tanggal_lahir;
+        // $data->save();
 
         return redirect()->route('xss1.view')->with('info','Tambah Mahasiswa berhasil');
     }

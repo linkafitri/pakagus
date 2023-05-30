@@ -42,14 +42,13 @@
 								<td>{$mhs->nama}</td>
 								<td>{$mhs->alamat}</td>
 								<td>{$mhs->tanggal_lahir}</td>
-								<td>
-									<a href='{{route('xss1.edit', $mhs->id)}}' class='btn btn-info'>Edit</a>
-									<a href='{{route('xss1.delete', $mhs->id)}}' id='delete' class='btn btn-danger'>Delete</a>
-								</td>
-								
-							</tr>
 							"
 							?>
+								<td>
+									<a href="{{route('xss1.edit', $mhs->id)}}" class="btn btn-info">Edit</a>
+									<a href="{{route('xss1.delete', $mhs->id)}}" id="delete" class="btn btn-danger">Delete</a>
+								</td>
+							</tr>
 							@endforeach
 
 						<!-- <tfoot>
