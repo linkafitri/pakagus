@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\MhsController;
 use App\Http\Controllers\Backend\LaguController;
 use App\Http\Controllers\Backend\XssController;
+use App\Http\Controllers\Backend\xss1controller;
 use App\Http\Controllers\ProdukController;
 
 /*
@@ -79,4 +80,13 @@ Route::prefix('xss')->group(function(){
     Route::get('/edit/{id}',[XssController::class, 'XssEdit'])->name('xss.edit');
     Route::post('/update/{id}',[XssController::class, 'XssUpdate'])->name('xss.update');
     Route::get('/delete/{id}',[XssController::class, 'XssDelete'])->name('xss.delete');
+});
+
+Route::prefix('xss1')->group(function(){
+    Route::get('/view',[xss1controller::class, 'XssView'])->name('xss1.view');
+    Route::get('/add',[xss1controller::class, 'XssAdd'])->name('xss1.add');
+    Route::post('/store',[xss1controller::class, 'XssStore'])->name('xss1.store');
+    Route::get('/edit/{id}',[xss1controller::class, 'XssEdit'])->name('xss1.edit');
+    Route::post('/update/{id}',[xss1controller::class, 'XssUpdate'])->name('xss1.update');
+    Route::get('/delete/{id}',[xss1controller::class, 'XssDelete'])->name('xss1.delete');
 });

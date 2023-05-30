@@ -93,6 +93,20 @@
             <li><a href="{{route('xss.add')}}"><i class="ti-more"></i>Tambah Xss</a></li>
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i data-feather="message-circle"></i>
+            <span>Percobaan Xss1</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{route('xss1.view')}}"><i class="ti-more"></i>Tampilkan Xss1</a></li>
+            <li><a href="{{route('xss1.add')}}"><i class="ti-more"></i>Tambah Xss1</a></li>
+          </ul>
+        </li>
 		  
 		  
         <li class="treeview">
